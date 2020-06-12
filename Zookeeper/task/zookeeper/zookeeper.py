@@ -120,9 +120,21 @@ Switching on camera from habitat with rabbits...
 It seems there will be more rabbits soon!"""
 
 
+animals = [camel, lion, deer, goose, bat, rabbit]
+
 # write your code here
-animals = [camel,lion,deer,goose,bat,rabbit]
-num = int(input("Which habitat # do you need? > "))
-print(animals[num])
-print("---")
-print("The end of the program. To check another habitat restart the watcher please.")
+
+
+exit = "null"
+channel = 1
+
+while exit == "null":
+	channel = input("Which habitat # do you need? > ")
+	if channel == "exit":
+		exit = channel
+	elif int(channel) < 6:
+		print(animals[int(channel)])
+	elif int(channel) >= 6:
+		print("anything more then 6 does not exisit")
+print("See you!")
+
